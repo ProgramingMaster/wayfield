@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myway": {
+    "wayfield": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myway",
+            "outputPath": "dist/wayfield",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,6 +27,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/onsenui/css/onsenui.css",
+              "node_modules/onsenui/css/onsen-css-components.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -61,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "myway:build"
+            "browserTarget": "wayfield:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "myway:build:production"
+              "browserTarget": "wayfield:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myway:build"
+            "browserTarget": "wayfield:build"
           }
         },
         "test": {
@@ -106,7 +108,7 @@
         }
       }
     },
-    "myway-e2e": {
+    "wayfield-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "myway:serve"
+            "devServerTarget": "wayfield:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "myway:serve:production"
+              "devServerTarget": "wayfield:serve:production"
             }
           }
         },
@@ -135,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "myway"
+  "defaultProject": "wayfield"
 }
